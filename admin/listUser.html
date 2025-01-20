@@ -50,64 +50,84 @@
             </div>
             <img src="/imgs/home.png" class="w-full h-full object-contain">
         </div>
-        <div class="w-[90%] grid gap-2 divide-y-2 divide-blue-300 mx-auto">
-            <div class="space-y-3 pt-2.5">
-                <div class="flex bg-white p-2.5 rounded-lg gap-3">
-                    <span class="bg-blue-300 h-fit p-2 rounded-full"><img src="/svgs/user.svg" class="w-3"></span>
-                    <div class="space-y-[2px]">
-                        <h1 class="text-black/70 text-sm font-normal">Rizky Rahman Rambe</h1>
-                        <h1 class="text-black/70 text-sm font-normal">rizkyrambe98@gmail.com</h1>
-                        <h1 class="text-black/70 text-sm font-normal">082161443797</h1>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="space-y-2 bg-white p-2.5 rounded-lg">
-                        <h1 class="text-center text-black/80 text-sm font-normal uppercase">KK</h1>
-                        <img src="/imgs/info1.jpg" class="w-full h-32">
-                    </div>
-                    <div class="space-y-2 bg-white p-2.5 rounded-lg">
-                        <h1 class="text-center text-black/80 text-sm font-normal uppercase">KTP</h1>
-                        <img src="/imgs/info1.jpg" class="w-full h-32">
-                    </div>
-                </div>
-            </div>
-            <div class="space-y-3 pt-2.5">
-                <div class="flex bg-white p-2.5 rounded-lg gap-3">
-                    <span class="bg-blue-300 h-fit p-2 rounded-full"><img src="/svgs/user.svg" class="w-3"></span>
-                    <div class="space-y-[2px]">
-                        <h1 class="text-black/70 text-sm font-normal">Rizky Rahman Rambe</h1>
-                        <h1 class="text-black/70 text-sm font-normal">rizkyrambe98@gmail.com</h1>
-                        <h1 class="text-black/70 text-sm font-normal">082161443797</h1>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="space-y-2 bg-white p-2.5 rounded-lg">
-                        <h1 class="text-center text-black/80 text-sm font-normal uppercase">KK</h1>
-                        <img src="/imgs/info1.jpg" class="w-full h-32">
-                    </div>
-                    <div class="space-y-2 bg-white p-2.5 rounded-lg">
-                        <h1 class="text-center text-black/80 text-sm font-normal uppercase">KTP</h1>
-                        <img src="/imgs/info1.jpg" class="w-full h-32">
+        <div class="w-[90%] mx-auto">
+            <div class="flex justify-end items-center">
+                <div x-data="{ isOpen : false }" class="relative space-y-3">
+                    <button @click="isOpen = !isOpen" class="flex justify-between items-center gap-2 w-36 bg-white py-2 px-4 rounded-lg shadow-sm shadow-black/20">
+                        <h1 class="text-[#838181] text-xs md:text-sm font-normal">filter</h1>
+                        <img src="/svgs/drop.svg">
+                    </button>
+                    <div x-show="isOpen" @click.outside="isOpen = false" x-transition.duration.300ms.opacity.50 :class="{ 'block': isOpen, 'hidden': !isOpen }" class="hidden w-max absolute z-10 right-0">
+                        <div class="grid divide-y-[1.5px] divide-[#ECEAEA] bg-white py-4 px-5 w-36 rounded md:rounded-md shadow-md shadow-black/20">
+                            <button class="flex items-center gap-2 md:gap-3 pb-2.5">
+                                <h1 class="text-[10px] md:text-xs text-black font-normal">Terbaru</h1>
+                            </button>
+                            <button class="flex items-center gap-2 md:gap-3 pt-2.5">
+                                <h1 class="text-[10px] md:text-xs text-black font-normal">Terlama</h1>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="space-y-4 pt-2.5">
-                <div class="flex bg-white p-2.5 rounded-lg gap-3">
-                    <span class="bg-blue-300 h-fit p-2 rounded-full"><img src="/svgs/user.svg" class="w-3"></span>
-                    <div class="space-y-[2px]">
-                        <h1 class="text-black/70 text-sm font-normal">Rizky Rahman Rambe</h1>
-                        <h1 class="text-black/70 text-sm font-normal">rizkyrambe98@gmail.com</h1>
-                        <h1 class="text-black/70 text-sm font-normal">082161443797</h1>
+            <div class="grid gap-2 divide-y-2 divide-blue-300">
+                <div class="space-y-3 pt-2.5">
+                    <div class="flex bg-white p-2.5 rounded-lg gap-3">
+                        <span class="bg-blue-300 h-fit p-2 rounded-full"><img src="/svgs/user.svg" class="w-3"></span>
+                        <div class="space-y-[2px]">
+                            <h1 class="text-black/70 text-sm font-medium">Rizky Rahman Rambe</h1>
+                            <h1 class="text-black/70 text-sm font-normal">rizkyrambe98@gmail.com</h1>
+                            <h1 class="text-black/70 text-sm font-normal">082161443797</h1>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="space-y-2 bg-white p-2.5 rounded-lg">
+                            <h1 class="text-center text-black/80 text-sm font-medium uppercase">KK</h1>
+                            <img src="/imgs/info1.jpg" class="w-full h-32 hover:opacity-60">
+                        </div>
+                        <div class="space-y-2 bg-white p-2.5 rounded-lg">
+                            <h1 class="text-center text-black/80 text-sm font-medium uppercase">KTP</h1>
+                            <img src="/imgs/info1.jpg" class="w-full h-32 hover:opacity-60">
+                        </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="space-y-2 bg-white p-2.5 rounded-lg">
-                        <h1 class="text-center text-black/80 text-sm font-normal uppercase">KK</h1>
-                        <img src="/imgs/info1.jpg" class="w-full h-32">
+                <div class="space-y-3 pt-2.5">
+                    <div class="flex bg-white p-2.5 rounded-lg gap-3">
+                        <span class="bg-blue-300 h-fit p-2 rounded-full"><img src="/svgs/user.svg" class="w-3"></span>
+                        <div class="space-y-[2px]">
+                            <h1 class="text-black/70 text-sm font-medium">Rizky Rahman Rambe</h1>
+                            <h1 class="text-black/70 text-sm font-normal">rizkyrambe98@gmail.com</h1>
+                            <h1 class="text-black/70 text-sm font-normal">082161443797</h1>
+                        </div>
                     </div>
-                    <div class="space-y-2 bg-white p-2.5 rounded-lg">
-                        <h1 class="text-center text-black/80 text-sm font-normal uppercase">KTP</h1>
-                        <img src="/imgs/info1.jpg" class="w-full h-32">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="space-y-2 bg-white p-2.5 rounded-lg">
+                            <h1 class="text-center text-black/80 text-sm font-medium uppercase">KK</h1>
+                            <img src="/imgs/info1.jpg" class="w-full h-32 hover:opacity-60">
+                        </div>
+                        <div class="space-y-2 bg-white p-2.5 rounded-lg">
+                            <h1 class="text-center text-black/80 text-sm font-medium uppercase">KTP</h1>
+                            <img src="/imgs/info1.jpg" class="w-full h-32 hover:opacity-60">
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4 pt-2.5">
+                    <div class="flex bg-white p-2.5 rounded-lg gap-3">
+                        <span class="bg-blue-300 h-fit p-2 rounded-full"><img src="/svgs/user.svg" class="w-3"></span>
+                        <div class="space-y-[2px]">
+                            <h1 class="text-black/70 text-sm font-medium">Rizky Rahman Rambe</h1>
+                            <h1 class="text-black/70 text-sm font-normal">rizkyrambe98@gmail.com</h1>
+                            <h1 class="text-black/70 text-sm font-normal">082161443797</h1>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="space-y-2 bg-white p-2.5 rounded-lg">
+                            <h1 class="text-center text-black/80 text-sm font-medium uppercase">KK</h1>
+                            <img src="/imgs/info1.jpg" class="w-full h-32 hover:opacity-60">
+                        </div>
+                        <div class="space-y-2 bg-white p-2.5 rounded-lg">
+                            <h1 class="text-center text-black/80 text-sm font-medium uppercase">KTP</h1>
+                            <img src="/imgs/info1.jpg" class="w-full h-32 hover:opacity-60">
+                        </div>
                     </div>
                 </div>
             </div>

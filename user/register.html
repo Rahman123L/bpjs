@@ -50,18 +50,37 @@
             </div>
             <img src="/imgs/home.png" class="w-full h-full object-contain">
         </div>
-        <div class="w-[90%] grid gap-2 mx-auto">
-            <h1 class="text-primary text-base font-medium">Informasi Terkini</h1>
-            <div class="grid grid-cols-2 gap-3">
-                <img src="/imgs/info5.jpg" class="w-full h-32 hover:opacity-60">
-                <img src="/imgs/info6.jpg" class="w-full h-32 hover:opacity-60">
-                <img src="/imgs/info3.jpeg" class="w-full h-32 hover:opacity-60">
-                <img src="/imgs/info1.jpg" class="w-full h-32 hover:opacity-60">
-                <img src="/imgs/info5.jpg" class="w-full h-32 hover:opacity-60">
-                <img src="/imgs/info4.jpg" class="w-full h-32 hover:opacity-60">
-                <img src="/imgs/info6.jpg" class="w-full h-32 hover:opacity-60">
-                <img src="/imgs/info2.jpg" class="w-full h-32 hover:opacity-60">
+        <div class="w-[80%] mx-auto space-y-3">
+            <h1 class="text-primary text-base font-medium">Daftar BPJS</h1>
+            <div class="grid gap-3">
+                <label class="flex items-center">
+                    <img src="/svgs/user1.svg" class="w-[18px] mr-3">
+                    <input type="text" placeholder="fullname" value="Rizky Rahman Rambe" autocomplete="off" disabled class="cursor-not-allowed w-full bg-transparent py-2 px-2 border-b-2 border-gray-400 text-gray-400 text-sm md:text-base font-normal focus:border-b-2 focus:outline-none focus:ring-0 placeholder:text-black placeholder:text-sm md:placeholder:text-base">
+                </label>
+                <label class="flex items-center">
+                    <img src="/svgs/email.svg" class="w-[18px] mr-3">
+                    <input type="email" placeholder="email" value="rizkyrambe98@gmail.com" autocomplete="off" disabled class="cursor-not-allowed w-full bg-transparent py-2 px-2 border-b-2 border-gray-400 text-gray-400 text-sm md:text-base font-normal focus:border-b-2 focus:outline-none focus:ring-0 placeholder:text-black placeholder:text-sm md:placeholder:text-base">
+                </label>
+                <label class="grid gap-1">
+                    <h1 class="mx-1 text-xs md:text-sm text-black font-medium">Kartu Keluarga</h1>
+                    <div class="flex justify-center items-center bg-white p-5 border-[1.5px] border-gray-400 rounded-lg cursor-pointer">
+                        <img id="image-preview1" src="/imgs/unggah.jpg" class="w-28 h-28 object-cover bg-cover rounded-xl">
+                    </div>
+                    <input type="file" class="hidden" onchange="previewImage(event, 'image-preview1')"/>
+                    <h1 class="mx-1 text-[10px] md:text-xs text-[#FF0000] font-normal">format .jpg, .png, .webp</h1>
+                </label>
+                <label class="grid gap-1">
+                    <h1 class="mx-1 text-xs md:text-sm text-black font-medium">Kartu Tanda Penduduk</h1>
+                    <div class="flex justify-center items-center bg-white p-5 border-[1.5px] border-gray-400 rounded-lg cursor-pointer">
+                        <img id="image-preview2" src="/imgs/unggah.jpg" class="w-28 h-28 object-cover bg-cover rounded-xl">
+                    </div>
+                    <input type="file" class="hidden" onchange="previewImage(event, 'image-preview2')"/>
+                    <h1 class="mx-1 text-[10px] md:text-xs text-[#FF0000] font-normal">format .jpg, .png, .webp</h1>
+                </label>
             </div>
+            <button class="w-full bg-primary py-2 px-4 mt-5 rounded-lg">
+                <h1 class="text-white text-sm font-medium">Daftar</h1>
+            </button>
         </div>
         <div class="fixed bottom-0 flex justify-center items-center w-full bg-white py-2.5 px-5">
             <div class="flex items-center gap-10">
@@ -71,7 +90,7 @@
                         <h1 class="text-black text-xs font-normal">Beranda</h1>
                     </button>
                 </a>
-                <a href="listUser.html">
+                <a href="register.html">
                     <button type="button" class="space-y-[2px]">
                         <img src="/svgs/document.svg" class="w-5 h-5 mx-auto">
                         <h1 class="text-black text-xs font-normal">Daftar</h1>
@@ -97,5 +116,6 @@
         </div>
     </div>
 
+    <script src="/js/imgs.js"></script>
 </body>
 </html>
