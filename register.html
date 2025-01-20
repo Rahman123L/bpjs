@@ -40,14 +40,22 @@
 </head>
 <body class="bg-[#E8F9FF]">
 
-    <main class="flex justify-center items-center h-screen">
+    <main class="flex justify-center items-center">
         <div class="md:hidden w-[80%] mt-5 mx-auto space-y-3.5">
             <img src="/imgs/bg3.png" class="w-[70%] h-[70%] object-contain mx-auto">
             <h1 class="text-black text-xl font-semibold">Daftar</h1>
             <div class="grid gap-3">
-                <label x-data="{ isOpen : false }" class="flex items-center">
+                <label class="flex items-center">
                     <img src="/svgs/user.svg" class="w-[18px] mr-3">
                     <input type="text" placeholder="username" autocomplete="off" class="w-full bg-transparent py-2 px-2 border-b-2 border-gray-400 text-sm md:text-base focus:border-b-2 focus:outline-none focus:ring-0 placeholder:text-black placeholder:text-sm md:placeholder:text-base">
+                </label>
+                <label class="flex items-center">
+                    <img src="/svgs/user.svg" class="w-[18px] mr-3">
+                    <input type="text" placeholder="fullname" autocomplete="off" class="w-full bg-transparent py-2 px-2 border-b-2 border-gray-400 text-sm md:text-base focus:border-b-2 focus:outline-none focus:ring-0 placeholder:text-black placeholder:text-sm md:placeholder:text-base">
+                </label>
+                <label class="flex items-center">
+                    <img src="/svgs/user.svg" class="w-[18px] mr-3">
+                    <input type="email" placeholder="email" autocomplete="off" class="w-full bg-transparent py-2 px-2 border-b-2 border-gray-400 text-sm md:text-base focus:border-b-2 focus:outline-none focus:ring-0 placeholder:text-black placeholder:text-sm md:placeholder:text-base">
                 </label>
                 <label x-data="{ isOpen : false }" class="flex items-center">
                     <img src="/svgs/lock.svg" class="w-[18px] mr-3">

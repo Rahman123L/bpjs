@@ -31,7 +31,6 @@
 
 body {
     overflow-y: scroll;
-    height: 100vh;
 }
 
 body::-webkit-scrollbar {
