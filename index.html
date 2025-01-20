@@ -41,9 +41,9 @@
 <body class="bg-[#E8F9FF]">
 
     <main class="flex justify-center items-center h-screen">
-        <div class="w-[80%] mt-5 mx-auto space-y-5">
+        <div class="md:hidden w-[80%] mt-5 mx-auto space-y-5">
             <div class="bg-blue-400 p-1 rounded-2xl">
-                <img src="imgs/bg1.png" class="w-full h-full object-contain">
+                <img src="/imgs/bg1.png" class="w-full h-full object-contain">
             </div>
             <div class="text-center space-y-1">
                 <h1 class="text-black text-lg font-semibold">BPJS - Kesehatan Untuk Semua</h1>
@@ -60,6 +60,16 @@
                         <h1 class="text-slate-800 text-sm font-medium">Daftar</h1>
                     </button>
                 </a>
+            </div>
+        </div>
+
+        <div class="hidden md:block w-[80%]">
+            <div class="space-y-3">
+                <img src="svgs/display.svg" class="w-20 h-20 object-contain mx-auto">
+                <div class="text-center">
+                    <h1 class="text-black text-base">Oops, Halaman Ini Tidak Mendukung Desktop!</h1>
+                    <p class="text-gray-600 text-sm">Silakan akses halaman ini melalui perangkat mobile untuk pengalaman terbaik.</p>
+                </div>
             </div>
         </div>
     </main>

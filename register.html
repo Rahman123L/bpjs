@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="imgs/" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.13/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.2/dist/cdn.min.js" defer></script>
+
+    <script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#60A5FA',
+                    secondary: '',
+                    tertiary: '',
+                },
+                boxShadow: {
+                    middle: '0px 0px 40px 1px rgba(0, 0, 0, 0.25)',
+                },
+                keyframes: {
+                    fadeIn: {
+                        '0%': { opacity: 0 },
+                        '100%': { opacity: 1 },
+                    },
+                },
+                animation: {
+                    fadeIn: "fadeIn 2s forwards",
+                },
+            },
+        },
+    };
+    </script>
+
+</head>
+<body class="bg-[#E8F9FF]">
+
+    <main class="flex justify-center items-center h-screen">
+        <div class="md:hidden w-[80%] mt-5 mx-auto space-y-3.5">
+            <img src="/imgs/bg3.png" class="w-[70%] h-[70%] object-contain mx-auto">
+            <h1 class="text-black text-xl font-semibold">Daftar</h1>
+            <div class="grid gap-3">
+                <label x-data="{ isOpen : false }" class="flex items-center">
+                    <img src="/svgs/user.svg" class="w-[18px] mr-3">
+                    <input type="text" placeholder="username" autocomplete="off" class="w-full bg-transparent py-2 px-2 border-b-2 border-gray-400 text-sm md:text-base focus:border-b-2 focus:outline-none focus:ring-0 placeholder:text-black placeholder:text-sm md:placeholder:text-base">
+                </label>
+                <label x-data="{ isOpen : false }" class="flex items-center">
+                    <img src="/svgs/lock.svg" class="w-[18px] mr-3">
+                    <input :type="isOpen ? 'text' : 'password'" placeholder="password" autocomplete="off" class="w-full bg-transparent py-2 px-2 border-b-2 border-gray-400 text-sm md:text-base focus:border-b-2 focus:outline-none focus:ring-0 placeholder:text-black placeholder:text-sm md:placeholder:text-base">
+                    <button type="button" @click="isOpen = !isOpen" class="border-b-2 border-gray-400 p-2">
+                        <img x-show="isOpen" src="/svgs/eye1.svg" class="w-[26px]">
+                        <img x-show="!isOpen" src="/svgs/eye2.svg" class="w-[26px]">
+                    </button>
+                </label>
+                <label x-data="{ isOpen : false }" class="flex items-center">
+                    <img src="/svgs/lock.svg" class="w-[18px] mr-3">
+                    <input :type="isOpen ? 'text' : 'password'" placeholder="Konfirmasi password" autocomplete="off" class="w-full bg-transparent py-2 px-2 border-b-2 border-gray-400 text-sm md:text-base focus:border-b-2 focus:outline-none focus:ring-0 placeholder:text-black placeholder:text-sm md:placeholder:text-base">
+                    <button type="button" @click="isOpen = !isOpen" class="border-b-2 border-gray-400 p-2">
+                        <img x-show="isOpen" src="/svgs/eye1.svg" class="w-[27px]">
+                        <img x-show="!isOpen" src="/svgs/eye2.svg" class="w-[27px]">
+                    </button>
+                </label>
+                <button class="w-full bg-primary py-2 px-4 mt-5 rounded-lg">
+                    <h1 class="text-white text-sm font-medium">Daftar</h1>
+                </button>
+                <div class="text-center text-[10px] md:text-xs text-gray-700 font-normal">
+                    <h1>Sudah Punya Akun? <a href="login.html" class="hover:underline hover:text-primary">Masuk</a></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden md:block w-[80%]">
+            <div class="space-y-3">
+                <img src="/svgs/display.svg" class="w-20 h-20 object-contain mx-auto">
+                <div class="text-center">
+                    <h1 class="text-black text-base">Oops, Halaman Ini Tidak Mendukung Desktop!</h1>
+                    <p class="text-gray-600 text-sm">Silakan akses halaman ini melalui perangkat mobile untuk pengalaman terbaik.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
